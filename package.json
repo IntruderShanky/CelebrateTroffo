@@ -5,10 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "run-s build:client build:aot build:server",
-    "build:client": "ng build -prod --build-optimizer --app 0",
-    "build:aot": "ng build --aot --app 1",
-    "build:server": "webpack -p",    "test": "ng test",
+    "build": "ng build --prod",
+    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -19,7 +17,7 @@
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
-    "@angular/flex-layout": "^2.0.0-beta.10-4905443",
+    "@angular/flex-layout": "^2.0.0-beta.10",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
     "@angular/material": "^5.2.0",
