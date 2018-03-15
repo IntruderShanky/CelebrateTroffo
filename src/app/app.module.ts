@@ -19,7 +19,7 @@ import {FormsModule} from '@angular/forms';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'celebrate_troffo'}),
     BrowserAnimationsModule,
     ParticlesModule,
     RoutingModule,
