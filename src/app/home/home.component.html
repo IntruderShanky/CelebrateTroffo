@@ -23,7 +23,7 @@
   </div>
 
   <div *ngIf="!isCreated" class="shareContainer" style="padding: 0;">
-    <div class="card_view" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
+    <div class="card_view" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="16px">
       <span class="small_heading">Create Your</span>
       <input class="edit_text" type="text" [(ngModel)]="newName" placeholder="Your Name">
       <button mat-raised-button class="button_primary" (click)="createYour()">Share</button>
