@@ -44,8 +44,7 @@ export class HomeComponent implements OnInit {
   }
 
   getUrl(): string {
-    const params = new HttpParams();
-    params.set('from', this.newName);
+    const params = new HttpParams().set('from', this.newName);
     return 'https://celebrate.troffo.com/?' + params.toString();
   }
 

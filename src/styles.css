@@ -50,7 +50,7 @@
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
   color: var(--colorAccent);
-  font-size: 20px;
+  font-size: 4vw;
   text-align: center;
   padding: 5px 20px;
   text-overflow: ellipsis;
@@ -61,12 +61,12 @@
 .quote_container {
   background-color: var(--colorAccent);
   margin: 20px;
-  padding: 10px;
+  padding: 2vh;
   border-radius: 4px;
   color: white;
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3vh;
   text-align: center;
   width: 50%;
   min-width: 300px;
