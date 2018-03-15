@@ -10,11 +10,11 @@ import {Meta} from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
   host = 'https://celebrate.troffo.com';
-
   name = 'Your Name';
   newName = '';
   isCreated = false;
   otherAvailable = false;
+  navi: any;
 
   constructor(private route: ActivatedRoute, private meta: Meta) {
   }
@@ -32,7 +32,8 @@ export class HomeComponent implements OnInit {
       content: 'Troffo Media, celebrate, share, wishes, joy, navratri'
     });
 
-    if (navigator.share) {
+    this.navi = window.navigator as any;
+    if (this.navi.share) {
       this.otherAvailable = true;
     }
     this.name = this.route.snapshot.data.name;
@@ -60,8 +61,8 @@ export class HomeComponent implements OnInit {
   }
 
   otherShare() {
-    if (navigator.share) {
-      navigator.share({
+    if (this.navi.share) {
+      this.navi.share({
         title: 'Happy Navratri!',
         text: this.name + ' sent you special wishes',
         url: this.getUrl(),
@@ -69,7 +70,7 @@ export class HomeComponent implements OnInit {
         .then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing', error));
     } else {
-      console.log('asdasdasd');
+      console.log('Share not supported');
     }
   }
 
