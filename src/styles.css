@@ -1,1 +1,173 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Pacifico');
+
+:root {
+  --colorPrimary: white;
+  --colorPrimaryDark: #303030;
+  --colorAccent: #B72025;
+  --colorWarn: #424242;
+  --light_blue_grey: #3d5562;
+  --dark_blue_grey: #2b3a42;
+  --textColor: #424242;
+  --black_shade: #212121;
+  --button_disabled: #727272;
+  --light_grey: #d9d9d9;
+  --error_color: #B71C1C;
+  --divider: rgba(0, 0, 0, 0.11);
+  --facebook_color: #3b5998;
+  --pinterest_color: #CB2026;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--divider)
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  z-index: 99;
+  background-color: var(--colorPrimary);
+  width: 100%;
+  box-shadow: 1px 1px 8px var(--divider);
+}
+
+.toolbar_title {
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  color: var(--colorAccent);
+  font-size: 4vh;
+  text-align: center;
+  text-overflow: clip;
+  -webkit-box-orient: vertical;
+}
+
+.name_text {
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: var(--colorAccent);
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 20px;
+  text-overflow: ellipsis;
+  z-index: 11;
+  -webkit-box-orient: vertical;
+}
+
+.quote_container {
+  background-color: var(--colorAccent);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 50%;
+  min-width: 300px;
+  text-overflow: ellipsis;
+  z-index: 11;
+  -webkit-box-orient: vertical;
+  box-shadow: 1px 1px 3px var(--divider);
+}
+
+.card_view {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  z-index: 11;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.share_facebook {
+  border-radius: 25px;
+  background-size: contain;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  background: var(--facebook_color) url("assets/facebook.png") no-repeat center;
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.share_whats_app {
+  border-radius: 25px;
+  background-size: contain;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  background: white url("assets/whats_app.png") no-repeat center;
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.share_other {
+  border-radius: 25px;
+  background-size: contain;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  background: var(--colorAccent) url("assets/ic_share.png") no-repeat center;
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.button_primary {
+  width: 120px;
+  text-transform: uppercase;
+  color: white !important;
+  background-color: var(--colorAccent) !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.small_heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: var(--textColor);
+  font-size: medium;
+}
+
+.shareContainer {
+  position: absolute;
+  bottom: 0;
+  z-index: 12;
+  right: 0;
+  padding: 16px;
+}
+
+.edit_text {
+  background-color: transparent;
+  outline: none;
+  display: block;
+  border: 1px solid var(--light_grey) !important;
+  padding: 10px 15px !important;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: small;
+  resize: vertical;
+  font-family: 'Comfortaa', cursive;
+  transition: 0.3s ease;
+}
+
+.edit_text:focus {
+  border: 1px solid var(--colorAccent) !important;
+  transition: 0.3s ease;
+  color: var(--textColor);
+}
+
+@media screen and (max-device-width: 600px) {
+  .main_body {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+
+  .share_text {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+}
